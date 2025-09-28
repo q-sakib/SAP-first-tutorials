@@ -1,9 +1,12 @@
 <mvc:View
-controllerName="ui5.walkthrough.controller.App"
+  controllerName="ui5.walkthrough.controller.App"
   xmlns="sap.m"
   xmlns:mvc="sap.ui.core.mvc">
   <Text text="Hello {/recipient/name} XML test" />
-  <Button text="Press me" press=".onShowHello"/>
+  <Button
+    text="{i18n>showHelloButtonText}"
+    press=".onShowHello"
+  />
   <Input
     value="{/recipient/name}"
     description="Hello {/recipient/name}"
