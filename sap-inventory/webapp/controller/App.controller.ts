@@ -7,7 +7,7 @@ export default class App extends Controller {
     // set data model on view
     const oData = {
       recipient: {
-        name: "World"
+        name: "from JSON Model"
       }
     };
     const oModel = new JSONModel(oData);
@@ -18,6 +18,6 @@ export default class App extends Controller {
 
   onShowHello():void {
     // show a native JavaScript alert
-    MessageToast.show("Hello World");
+    MessageToast.show("Hello " + this.getView()?.getModel()?.getProperty("/recipient/name"));
   }
 }

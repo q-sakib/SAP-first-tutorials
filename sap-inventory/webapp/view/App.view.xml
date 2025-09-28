@@ -2,6 +2,12 @@
 controllerName="ui5.walkthrough.controller.App"
   xmlns="sap.m"
   xmlns:mvc="sap.ui.core.mvc">
-  <Text text="Hello World XML test" />
+  <Text text="Hello {/recipient/name} XML test" />
   <Button text="Press me" press=".onShowHello"/>
+  <Input
+    value="{/recipient/name}"
+    description="Hello {/recipient/name}"
+    valueLiveUpdate="true"
+    width="50%"
+  />
 </mvc:View>
